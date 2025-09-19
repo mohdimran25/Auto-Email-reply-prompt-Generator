@@ -1,6 +1,7 @@
 package com.email.writer.app;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,6 +12,7 @@ import lombok.AllArgsConstructor;
 @RestController
 @RequestMapping("/api/email")
 @AllArgsConstructor
+@CrossOrigin(origins = "*") // allow all origins requests
 public class EmailGeneratorController {
 	
 	public final EmailGeneratorService emailGeneratorService;
